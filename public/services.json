@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "Yamaha-r15m",
+        "Engine": "145.3 cc (liq cooled)",
+        "price": "170000",
+        "Top Speed": "145 Kmph (approx)",
+        "description": "The Yamaha YZF-R15 is a single cylinder sport bike made by Yamaha Motor Company since 2008. In September 2011, the second iteration, called v2.0, was released in India, and in April 2014 it was released in Indonesia.",
+        "img": "https://i.ibb.co/DDw64bX/isolated-jet-black-super-sport-bike-from-left-rear-view-16145-296.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Suzuki-gixxer",
+        "Engine": "157.3 cc (liq cooled)",
+        "price": "180000",
+        "Top Speed": "125 Kmph (approx)",
+        "description": "The Suzuki Gixxer is a 154.9 cc naked motorcycle from Suzuki. The bike was launched in September 2014. Its design is similar to the GSX-S1000. The name derives from a nickname used in Britain and elsewhere for.",
+        "img": "https://i.ibb.co/fkwqy8d/isolated-black-super-sport-bike-from-left-front-view-16145-516.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Aprilia-rs4",
+        "Engine": "147.3 cc (liq cooled)",
+        "price": "185000",
+        "Top Speed": "125 Kmph (approx)",
+        "description": "The Aprilia RS4 125 is quite a powerful bike considering its capacity. It comes with a 4-stroke, 4 valves, single-cylinder, and 125cc engine. ... The engine pumps out a staggering 14.8BHP of power at 10500rpm and 10.9Nm.",
+        "img": "https://i.ibb.co/Hdf9fGD/isolated-black-grand-motorcycle-3d-rendering-16145-256.jpg"
+    },
+    {
+        "id": 4,
+        "name": "KTM 125",
+        "Engine": "149.3 cc (liq cooled)",
+        "price": "190000",
+        "Top Speed": "155 Kmph (approx)",
+        "description": "The KTM 125 Duke is powered by a 124.7 cc air-cooled engine which produces of power. It has a fuel tank of 13.5 L and a . The KTM 125 Duke starts at Rs 1.70 Lakh Rs (ex-showroom, Delhi). It is available in one variants.",
+        "img": "https://i.ibb.co/VmhH76n/isolated-white-grand-motorcycle-from-front-right-view-16145-221.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Royal Enfield Classic 350",
+        "Engine": "137.3 cc (liq cooled)",
+        "price": "170000",
+        "Top Speed": "165 Kmph (approx)",
+        "description": "The Royal Enfield Classic 350 is powered by a 349.34 cc air-cooled engine which produces of power. It has a fuel tank of 13 L and a . The Royal Enfield Classic 350 starts at Rs 1.84 and goes up to Rs 2.15 Lakh (ex-showroom, Delhi).",
+        "img": "https://i.ibb.co/jTnzGYs/isolated-white-super-sport-bike-from-left-side-view-16145-203.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Bajaj Pulsar",
+        "Engine": "143.3 cc (liq cooled)",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/bQLFPQx/isolated-black-sport-bike-from-right-front-view-16145-353.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Bmw k130",
+        "Engine": "153.3 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/VMnh958/isolated-black-super-sport-bike-from-right-front-view-16145-520.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Harley",
+        "Engine": "125 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/pZ3gNdY/isolated-red-super-sport-bike-side-stand-from-right-front-view-16145-216.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Suzuki",
+        "Engine": "120 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/HB3WsZh/female-driver-driving-green-neon-color-motorcycle-road-114579-5032.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Honda",
+        "Engine": "129 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/yd1PwtP/high-speed-motorcycle-biking-road-accross-forest-114579-6110.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Bmw 1700",
+        "Engine": "120.3 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/vjrXn3P/motorcyclist-biking-road-114579-5069.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Bajaj Pulsar",
+        "Engine": "140 cc",
+        "price": "175000",
+        "Top Speed": "122 Kmph (approx)",
+        "description": "The Bajaj Pulsar is a motorcycle manufactured by Bajaj Auto in India. It was developed by the product engineering division of Bajaj Auto in association with Tokyo R&D, and later with motorcycle designer Glynn Kerr.",
+        "img": "https://i.ibb.co/qdQNpC5/motorcyclist-holding-sign-23-2148655724.jpg"
+    }
+]
