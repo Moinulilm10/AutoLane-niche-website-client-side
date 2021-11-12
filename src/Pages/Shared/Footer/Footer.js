@@ -56,7 +56,6 @@ const Footer = () => {
                     </Grid>
                 </Grid>
                 <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px 0', borderTop: '1px solid gray' }}>
-                    <Typography style={{ color: 'gray' }} variant="body1">Copyright &copy; all right reserved {new Date().getFullYear()} | developed by AbC Company</Typography>
                     <div>
                         <Link className={linkItem} to="#">Private Policy</Link>
                         <Link className={linkItem} to="#">Terms of Use</Link>

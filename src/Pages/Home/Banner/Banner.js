@@ -1,8 +1,8 @@
 import React from 'react';
 import { makeStyles, Typography } from '@material-ui/core';
 import img from '../../../Images/Banner/banner-bg.jpg'
-import { Button, Grid } from '@mui/material';
-import { Link, NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
+import { NavLink } from 'react-router-dom';
 
 const useStyle = makeStyles(theme => ({
     banner: {
@@ -27,7 +27,7 @@ const Banner = () => {
             <Typography variant="h2" style={{ padding: '0 30px' }} >
                 The Best Bike You Will Get.
                 <br />
-                <NavLink style={{ textDecoration: '', color: 'white' }} to="/services">
+                <NavLink style={{ textDecoration: '', color: 'white' }} to="/explores">
                     <Button color="inherit">Explore Our Products</Button>
                 </NavLink>
             </Typography>

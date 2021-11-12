@@ -1,6 +1,6 @@
 import './App.css';
 import NotFound from './Pages/Shared/NotFound/NotFound';
-import Footer from './Pages/Shared/Footer/Footer';
+
 import AboutUs from './Pages/AboutUs/AboutUs';
 import Navigation from './Pages/Shared/Navigation/Navigation';
 import Home from './Pages/Home/Home/Home';
@@ -10,6 +10,10 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import AuthProvider from './Context/AuthProvider';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
+import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
+import Dashboard from './Pages/DashBoardSection/Dashboard/Dashboard';
+import Explore from './Pages/Home/Explore/Explore';
+import Explores from './Pages/Home/Explores/Explores';
 
 
 function App() {
@@ -17,7 +21,6 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -28,9 +31,15 @@ function App() {
             <Route exact path="/services" >
               <Services></Services>
             </Route>
-            <Route exact path="/placeorder/:serviceId" >
-              <PlaceOrder></PlaceOrder>
+            <Route exact path="/explores" >
+              <Explores></Explores>
             </Route>
+            <PrivateRoute exact path="/placeorder/:serviceId" >
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard" >
+              <Dashboard></Dashboard>
+            </PrivateRoute>
             <Route exact path="/about">
               <AboutUs></AboutUs>
             </Route>
@@ -44,7 +53,6 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
-          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
