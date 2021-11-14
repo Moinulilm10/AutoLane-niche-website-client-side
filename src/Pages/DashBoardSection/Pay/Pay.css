@@ -1,0 +1,11 @@
+@media only screen and (max-width: 688px) {
+  .img img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 1200px) {
+  .img img {
+    width: 100%;
+  }
+}

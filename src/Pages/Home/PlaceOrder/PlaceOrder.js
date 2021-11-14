@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActionArea } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
@@ -17,7 +17,7 @@ const PlaceOrder = () => {
     const { serviceId } = useParams();
     const [service, setService] = useState({});
 
-    const { user } = useAuth();
+    const { user, admin } = useAuth();
 
     const { register, handleSubmit, reset } = useForm()
 
@@ -58,30 +58,6 @@ const PlaceOrder = () => {
             <Navigation></Navigation>
             <Grid container style={{ margin: '50px' }} spacing={2}>
                 <Grid item xs={12} sm={6} md={6} lg={4}>
-                    {/* <Card sx={{ maxWidth: 400, mt: 5, mb: 4 }}>
-                    <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            height="180"
-                            image={service.img}
-                            alt="green iguana"
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {service.name}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {service.description}
-                            </Typography>
-                            <br />
-                            <Typography variant="h6" color="" >
-                                <i class="fas fa-dollar-sign">{service.price}</i>
-                            </Typography>
-                        </CardContent>
-                    </CardActionArea>
-                </Card> */}
-
-
                     <Card sx={{ maxWidth: 345 }}>
                         <CardActionArea>
                             <CardMedia
@@ -116,7 +92,16 @@ const PlaceOrder = () => {
                                 <input type="date" {...register("date", { required: true })} placeholder="date" />
                                 <input type="phone" {...register("phone", { required: true })} placeholder="phone number" />
                                 <input {...register("city", { required: true, maxLength: 20 })} placeholder="city" />
-                                <input type="submit" />
+                                < input type="submit" />
+                                {/* {admin ?
+                                    <Button variant="contained" disabled>
+                                        Disabled
+                                    </Button>
+
+                                    :
+                                    < input type="submit" />
+                                } */}
+
                             </form>
                         </div>
                     </div>

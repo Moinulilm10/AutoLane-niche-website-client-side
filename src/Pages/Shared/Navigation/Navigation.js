@@ -27,13 +27,15 @@ const Navigation = () => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <img style={{
+
+                    <Link to="/"><img style={{
                         marginTop: "10px",
                         marginBottom: "10px",
                         width: "200px",
                         // marginRight: '700px'
                     }}
                         src={navImg} alt="" />
+                    </Link>
 
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     </Typography>
@@ -61,7 +63,7 @@ const Navigation = () => {
                     }
 
 
-                    <Typography variant="button" display="block" gutterBottom>
+                    <Typography variant="button" >
                         <a href="#login"> {user?.displayName}</a>
                     </Typography>
 

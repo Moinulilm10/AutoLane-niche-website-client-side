@@ -1,4 +1,4 @@
-import firebaseConfig from "./Firebase.config";
+import firebaseConfig from './Firebase.config'
 import { initializeApp } from "firebase/app";
 
 

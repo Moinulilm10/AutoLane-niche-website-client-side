@@ -1,18 +1,17 @@
-import { Button, CircularProgress, Container, Grid, TextField } from '@mui/material';
-import Typography from '@mui/material/Typography';
-import { Alert } from '@mui/material';
+import { Container, Grid, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
+import { textAlign } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import login from '../../../Images/login.jpg'
-import Navigation from '../../Shared/Navigation/Navigation';
 import Footer from '../../Shared/Footer/Footer';
+import Navigation from '../../Shared/Navigation/Navigation';
+
 
 const Login = () => {
 
-    const [loginData, setLoginData] = useState({});
-    const { user, loginUser, signInWithGoogle, isLoading, authError } = useAuth();
-
+    const [loginData, setLoginData] = useState({})
+    const { user, loginUser, authError, isLoading, signInWithGoogle } = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -21,63 +20,60 @@ const Login = () => {
         const value = e.target.value;
         const newLoginData = { ...loginData };
         newLoginData[field] = value;
-        setLoginData(newLoginData);
+        setLoginData(newLoginData)
+
     }
     const handleLoginSubmit = e => {
         loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
     }
-
     const handleGoogleSignIn = () => {
         signInWithGoogle(location, history)
     }
-
     return (
-        // <Container>
         <div>
             <Navigation></Navigation>
-            <Grid container spacing={2}>
-                <Grid item sx={{ mt: 8 }} xs={12} md={6}>
-                    <Typography variant="body1" gutterBottom>Login</Typography>
-                    <form onSubmit={handleLoginSubmit}>
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Email"
-                            name="email"
-                            onChange={handleOnChange}
-                            variant="standard" />
-                        <TextField
-                            sx={{ width: '75%', m: 1 }}
-                            id="standard-basic"
-                            label="Your Password"
-                            type="password"
-                            name="password"
-                            onChange={handleOnChange}
-                            variant="standard" />
+            <Container style={{ marginTop: '50px' }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={6} style={{ marginTop: '50px' }}>
+                        <Typography sx={{ fontWeight: 500, color: '#2c2c2c', m: 3 }} variant="h6" component="div">
+                            Login
+                        </Typography>
+                        <form onSubmit={handleLoginSubmit}>
+                            <TextField
+                                sx={{ width: '75%', m: 1, color: 'blue' }}
+                                id="standard-basic"
+                                label="Enter Your Email"
+                                name="email"
+                                onChange={handleOnChange}
+                                variant="standard" />
+                            <TextField
+                                sx={{ width: '75%', m: 1, color: 'blue' }}
+                                id="standard-basic"
+                                label="Your PassWord"
+                                name="password"
 
-                        <Button sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Login</Button>
-                        <NavLink
-                            style={{ textDecoration: 'none' }}
-                            to="/register">
-                            <Button variant="text">New User? Please Register</Button>
-                        </NavLink>
-                        {isLoading && <CircularProgress />}
-                        {user?.email && <Alert severity="success">Login successfully!</Alert>}
-                        {authError && <Alert severity="error">{authError}</Alert>}
-                        <br />
-                        <br />
+                                type="password"
 
-                    </form>
-                    <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+                                onChange={handleOnChange}
+                                variant="standard" />
+                            <Button sx={{ width: '75%', mt: 4 }} type="submit" variant="contained">Login</Button>
+                            <NavLink style={{ textDecoration: 'none', marginTop: '30px', }} to="/register"><Button variant="text" style={{ marginTop: '30px', textAlign: 'center' }}>New User? Please Register</Button></NavLink>
+                            {isLoading && <CircularProgress />}
+                            {user?.email && <Alert severity="success">User Login Successfully!</Alert>}
+                            {authError && <Alert severity="error">{authError}</Alert>}
+                        </form>
+                        <br />
+                        <Button onClick={handleGoogleSignIn} sx={{ width: '75%', m: 1 }} type="submit" variant="contained">Google Sign In</Button>
+                    </Grid>
+                    <Grid item xs={12} md={6}>
+                        <img style={{ width: '100%' }} src={login} alt="" />
+                    </Grid>
+
                 </Grid>
-                <Grid item xs={12} md={6}>
-                    <img style={{ width: '100%' }} src={login} alt="" />
-                </Grid>
-            </Grid>
+            </Container>
             <Footer></Footer>
         </div>
-        // </Container>
     );
 };
 
