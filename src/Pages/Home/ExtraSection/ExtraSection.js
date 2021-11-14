@@ -6,14 +6,14 @@ import './ExtraSection.css'
 
 const ExtraSection = () => {
     return (
-        <div>
+        <div style={{ marginTop: '100px' }}>
             <Typography style={{ fontFamily: 'Brush Script MT, Brush Script Std, cursive', fontSize: '30px', color: 'darkred' }} variant="h6" gutterBottom component="div">
                 Why chose us
             </Typography>
             <Typography style={{ fontWeight: 'bolder' }} variant="h4" component="div">
                 our advantages
             </Typography>
-            <div class="container">
+            <div class="container" style={{ marginTop: '-10px' }}>
                 <div class="card">
                     <div class="face face1">
                         <div class="content">

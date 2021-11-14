@@ -1,13 +1,12 @@
 .container {
-  width: 1000px;
-  /* position: relative; */
+  position: relative;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  margin: 100px;
 }
 
 .container .card {
-  /* position: relative; */
+  position: relative;
   cursor: pointer;
 }
 

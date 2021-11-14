@@ -20,12 +20,6 @@ import ListItemText from '@mui/material/ListItemText';
 
 
 
-
-
-
-
-
-
 export default function Navigation() {
 
     const theme = useTheme();
@@ -68,10 +62,22 @@ export default function Navigation() {
         <Box
             sx={{ width: 250 }}
             role="presentation"
-
         >
-            <List>
 
+            <List>
+                <ListItem button>
+                    <ListItemText>
+                        <NavLink to="/">
+                            <img style={{
+                                marginTop: "10px",
+                                marginBottom: "10px",
+                                width: "180px",
+                                backgroundColor: 'black'
+                            }}
+                                src={navImg} alt="" />
+                        </NavLink>
+                    </ListItemText>
+                </ListItem>
                 <ListItem button>
                     <ListItemText>
                         <Link className={mobileNavItem} to="/">Home</Link>
@@ -118,12 +124,6 @@ export default function Navigation() {
 
 
 
-
-
-
-                {/* <ListItemIcon>
-
-                    </ListItemIcon> */}
             </List>
 
         </Box>
@@ -135,7 +135,7 @@ export default function Navigation() {
 
         <>
             <Box sx={{ flexGrow: 1 }}>
-                <AppBar position="static">
+                <AppBar style={{ backgroundColor: '#343434' }} position="static">
                     <Toolbar>
                         <IconButton
                             size="large"
@@ -151,19 +151,19 @@ export default function Navigation() {
 
 
 
-                        <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            <NavLink to="/"><img style={{
-                                marginTop: "10px",
-                                marginBottom: "10px",
-                                width: "200px",
-                                marginRight: '800px'
-                            }}
-                                src={navImg} alt="" />
+                        <Typography style={{ marginRight: '600px' }} className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            <NavLink to="/">
+                                <img style={{
+                                    marginTop: "10px",
+                                    marginBottom: "10px",
+                                    width: "200px",
+                                }}
+                                    src={navImg} alt="" />
                             </NavLink>
                         </Typography>
 
 
-                        <div className={navItemContainer}>
+                        <div style={{ display: 'flex' }} className={navItemContainer}>
                             <Link className={navItem} to="/explores">
                                 <Button color="inherit">Products</Button>
                             </Link>
@@ -188,8 +188,8 @@ export default function Navigation() {
                             }
 
 
-                            <Typography variant="button" >
-                                <a href="#login"> {user?.displayName}</a>
+                            <Typography style={{ margin: '6px', }} variant="button" >
+                                <a style={{ color: 'yellow' }} href="#login"> {user?.displayName}</a>
                             </Typography>
                         </div>
 

@@ -23,9 +23,9 @@ const Services = () => {
     }, [])
 
     return (
-        <div>
-
-            <Box sx={{ flexGrow: 1 }}>
+        <div style={{ marginTop: '70px' }}>
+            {/* <Box sx={{ flexGrow: 1 }}> */}
+            <Container>
                 <Typography sx={{ fontWeight: 500, mt: 5, color: 'primary.main' }} variant="h3" component="div">
                     Our Products
                 </Typography>
@@ -35,20 +35,20 @@ const Services = () => {
                     )
                     :
                     (
-                        <Container>
-                            <Grid container spacing={{ xs: 12, md: 4, lg: 4 }} columns={{ xs: 12, sm: 6, md: 4, lg: 4 }}>
-                                {
-                                    services.map(service => <Service
-                                        key={service._id}
-                                        service={service}
-                                    ></Service>)
-                                }
-                            </Grid>
-                        </Container>
+
+                        <Grid container spacing={2}>
+                            {
+                                services.map(service => <Service
+                                    key={service._id}
+                                    service={service}
+                                ></Service>)
+                            }
+                        </Grid>
+
                     )
                 }
-            </Box>
-
+                {/* </Box> */}
+            </Container>
         </div>
     );
 };

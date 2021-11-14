@@ -19,7 +19,6 @@ const Review = () => {
         axios.post('http://localhost:5000/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    console.log(data)
                     alert('added successfully');
                     setSuccess(true);
                     reset()
@@ -37,14 +36,25 @@ const Review = () => {
             </Typography>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input {...register("img")} placeholder="want to upload a pic ?" />
-                <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                <input type="number" {...register("ratting", { min: 0, max: 5 })} placeholder="ratting" />
+                <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+                {/* <input type="number" {...register("ratting", { min: 0, max: 5 })} placeholder="ratting" /> */}
+
+                <select {...register("ratting")}>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+
+                <input type="date" {...register("date", { required: true })} placeholder="date" />
+
                 <textarea {...register("description")} placeholder="Write something about our web app" />
                 <br />
                 <input type="submit" />
             </form>
             <br />
-            {success && <Alert severity="success">add product successfully</Alert>}
+            {success && <Alert severity="success">add review successfully</Alert>}
         </div>
     );
 };

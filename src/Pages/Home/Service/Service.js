@@ -11,8 +11,8 @@ import { Link, NavLink } from 'react-router-dom';
 const Service = (props) => {
     const { _id, name, description, img, price } = props.service;
     return (
-        <Grid item xs={12} sm={6} md={4} lg={4}>
-            <Card sx={{ maxWidth: 350, mt: 5, mb: 4 }}>
+        <Grid item xs={12} sm={6} md={4}>
+            <Card sx={{ maxWidth: 350, m: 6 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
@@ -33,11 +33,6 @@ const Service = (props) => {
                         </Typography>
                     </CardContent>
                 </CardActionArea>
-                {/* <CardActions>
-                    <NavLink style={{ textDecoration: 'none', color: 'white', textAlign: 'center' }} to={`/placeorder/${_id}`}>
-                        <Button variant="contained">Buy Now</Button>
-                    </NavLink>
-                </CardActions> */}
                 <CardActions>
                     <NavLink style={{ textDecoration: 'none', color: '#2c2c2c', m: 'auto', fontSize: '21px' }} to={`/placeorder/${_id}`}>
                         <i class="fas fa-shopping-cart">  Buy Now</i>
