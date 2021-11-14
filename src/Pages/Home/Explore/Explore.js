@@ -25,7 +25,7 @@ const Explore = (props) => {
                             {name}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {description}
+                            {description.slice(0, 170)}
                         </Typography>
                         <br />
                         <Typography variant="h6" color="" >

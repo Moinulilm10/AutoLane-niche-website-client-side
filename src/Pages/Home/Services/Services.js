@@ -1,10 +1,11 @@
-import { CircularProgress, Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
+import { CircularProgress, Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Navigation from '../../Shared/Navigation/Navigation';
-
 import Service from '../Service/Service';
+
+
+
 const Services = () => {
 
     const [services, setServices] = useState([])
@@ -25,7 +26,7 @@ const Services = () => {
         <div>
 
             <Box sx={{ flexGrow: 1 }}>
-                <Typography sx={{ fontWeight: 500, mt: 5, color: 'success.main' }} variant="h3" component="div">
+                <Typography sx={{ fontWeight: 500, mt: 5, color: 'primary.main' }} variant="h3" component="div">
                     Our Products
                 </Typography>
                 {isLoading ?
@@ -35,7 +36,7 @@ const Services = () => {
                     :
                     (
                         <Container>
-                            <Grid container spacing={{ xs: 12, md: 4 }} columns={{ xs: 12, sm: 6, md: 4 }}>
+                            <Grid container spacing={{ xs: 12, md: 4, lg: 4 }} columns={{ xs: 12, sm: 6, md: 4, lg: 4 }}>
                                 {
                                     services.map(service => <Service
                                         key={service._id}

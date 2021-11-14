@@ -1,8 +1,6 @@
 import './App.css';
 import NotFound from './Pages/Shared/NotFound/NotFound';
-
 import AboutUs from './Pages/AboutUs/AboutUs';
-import Navigation from './Pages/Shared/Navigation/Navigation';
 import Home from './Pages/Home/Home/Home';
 import Services from './Pages/Home/Services/Services';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
@@ -12,7 +10,6 @@ import AuthProvider from './Context/AuthProvider';
 import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/DashBoardSection/Dashboard/Dashboard';
-import Explore from './Pages/Home/Explore/Explore';
 import Explores from './Pages/Home/Explores/Explores';
 
 

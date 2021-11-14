@@ -47,7 +47,6 @@ function Dashboard(props) {
 
     const drawer = (
         <div>
-
             <Toolbar />
 
             <Link style={{ textDecoration: 'none', color: '#2c2c2c' }} to="/">
@@ -195,7 +194,7 @@ function Dashboard(props) {
                                 </Switch>
                                 :
                                 <Switch>
-                                    <AdminRoute path={`${path}/makeAdmin`}>
+                                    <AdminRoute exact path={`${path}`}>
                                         <MakeAdmin></MakeAdmin>
                                     </AdminRoute>
                                     <AdminRoute path={`${path}/addProduct`}>

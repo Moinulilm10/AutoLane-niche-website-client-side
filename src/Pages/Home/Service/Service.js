@@ -11,7 +11,7 @@ import { Link, NavLink } from 'react-router-dom';
 const Service = (props) => {
     const { _id, name, description, img, price } = props.service;
     return (
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={4} lg={4}>
             <Card sx={{ maxWidth: 350, mt: 5, mb: 4 }}>
                 <CardActionArea>
                     <CardMedia

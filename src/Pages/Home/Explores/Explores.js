@@ -1,4 +1,5 @@
-import { CircularProgress, Container, Grid, Typography } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
+import { CircularProgress, Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Footer from '../../Shared/Footer/Footer';
@@ -26,7 +27,7 @@ const Explores = () => {
         <div>
             <Navigation></Navigation>
             <Box sx={{ flexGrow: 1 }}>
-                <Typography sx={{ fontWeight: 500, mt: 5, color: 'success.main' }} variant="h3" component="div">
+                <Typography sx={{ fontWeight: 500, mt: 5, color: 'primary.main' }} variant="h3" component="div">
                     Our Products
                 </Typography>
                 {isLoading ?
