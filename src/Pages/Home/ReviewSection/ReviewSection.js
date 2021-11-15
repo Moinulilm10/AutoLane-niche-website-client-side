@@ -13,7 +13,7 @@ const ReviewSection = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('http://localhost:5000/getReviews')
+        fetch('https://safe-oasis-85721.herokuapp.com/getReviews')
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -50,4 +50,4 @@ export default ReviewSection;
 
 
 
-// http://localhost:5000/getReviews
+// https://safe-oasis-85721.herokuapp.com/getReviews

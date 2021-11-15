@@ -15,9 +15,9 @@ const MakeAdmin = () => {
 
         const user = { email }
 
-        // const url = 'http://localhost:5000/users/admin'
+        // const url = 'https://safe-oasis-85721.herokuapp.com/users/admin'
 
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://safe-oasis-85721.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

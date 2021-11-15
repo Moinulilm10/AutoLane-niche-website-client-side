@@ -15,7 +15,7 @@ const Explores = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('http://localhost:5000/services')
+        fetch('https://safe-oasis-85721.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setServices(data)

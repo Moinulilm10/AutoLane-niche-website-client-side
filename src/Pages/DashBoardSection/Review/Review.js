@@ -16,7 +16,7 @@ const Review = () => {
     const onSubmit = data => {
         // console.log(data);
         data.email = user?.email;
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://safe-oasis-85721.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');
@@ -63,4 +63,4 @@ export default Review;
 
 
 
-// const url = http://localhost:5000/reviews
+// const url = https://safe-oasis-85721.herokuapp.com/reviews

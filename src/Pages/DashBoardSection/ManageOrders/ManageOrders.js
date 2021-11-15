@@ -16,7 +16,7 @@ const ManageOrders = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders`;
+        const url = `https://safe-oasis-85721.herokuapp.com/orders`;
         // const url = `https://quiet-hamlet-58430.herokuapp.com/orders`;
         fetch(url)
             .then(res => res.json())
@@ -31,7 +31,7 @@ const ManageOrders = () => {
         const proceed = window.confirm('Are you sure, you want to cancel the order?')
         if (proceed) {
 
-            const url = `http://localhost:5000/deleteOrder/${id}`;
+            const url = `https://safe-oasis-85721.herokuapp.com/deleteOrder/${id}`;
             // const url = `https://quiet-hamlet-58430.herokuapp.com/deleteOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
@@ -56,7 +56,7 @@ const ManageOrders = () => {
         updatedorder.status = 'approved';
 
 
-        const url = `http://localhost:5000/approve/${id}`;
+        const url = `https://safe-oasis-85721.herokuapp.com/approve/${id}`;
         // const url = `https://quiet-hamlet-58430.herokuapp.com/approve/${id}`;
         fetch(url, {
             method: 'PUT',

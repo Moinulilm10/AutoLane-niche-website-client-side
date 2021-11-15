@@ -5,7 +5,7 @@ import logo from '../../../Images/Logo/logo-retina.png'
 
 import img from '../../../Images/Banner/banner-bg.jpg'
 
-import { Container, Grid, List, ListItem, makeStyles, Typography } from '@material-ui/core';
+import { Container, Grid, List, ListItem, makeStyles } from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
 const useStyle = makeStyles(theme => ({

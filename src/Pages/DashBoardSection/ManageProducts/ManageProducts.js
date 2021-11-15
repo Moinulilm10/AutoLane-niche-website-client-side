@@ -14,7 +14,7 @@ const ManageProducts = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch('http://localhost:5000/services')
+        fetch('https://safe-oasis-85721.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 setAllProducts(data);
@@ -24,7 +24,7 @@ const ManageProducts = () => {
 
 
     const handleDelete = (id) => {
-        const url = `http://localhost:5000/services/${id}`
+        const url = `https://safe-oasis-85721.herokuapp.com/services/${id}`
         fetch(url, {
             method: 'DELETE'
         })
@@ -42,14 +42,14 @@ const ManageProducts = () => {
 
 
     return (
-        <Container>
+        <Container style={{ marginTop: '60px', margin: '60px' }}>
             {!isLoading ?
-                <Grid container spacing={{ xs: 12, md: 4, lg: 4 }} columns={{ xs: 12, sm: 6, md: 4, lg: 4 }}>
+                <Grid container spacing={{ xs: 12, md: 4, lg: 2 }} columns={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
 
                     {
                         allProducts.map((product) =>
                             <div>
-                                <Grid item xs={12} sm={6} md={4} lg={4}>
+                                <Grid item xs={12} sm={6} md={6} lg={6}>
                                     <Card sx={{ maxWidth: 380, mt: 5, mb: 4, height: 450 }}>
                                         <CardActionArea>
                                             <CardMedia

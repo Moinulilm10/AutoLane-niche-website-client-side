@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea } from '@mui/material';
+import { CardActionArea } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
@@ -25,7 +25,7 @@ const PlaceOrder = () => {
         data.order = service._id;
         data.status = 'pending';
 
-        const url = `http://localhost:5000/placeOrder`;
+        const url = `https://safe-oasis-85721.herokuapp.com/placeOrder`;
         // const url = `https://quiet-hamlet-58430.herokuapp.com/placeOrder`;
         fetch(url, {
             method: 'POST',
@@ -45,7 +45,7 @@ const PlaceOrder = () => {
 
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${serviceId}`;
+        const url = `https://safe-oasis-85721.herokuapp.com/services/${serviceId}`;
         // const url = `https://quiet-hamlet-58430.herokuapp.com/services/${serviceId}`;
         fetch(url)
             .then(res => res.json())

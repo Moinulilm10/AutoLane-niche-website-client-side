@@ -19,7 +19,7 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5000/myOrders/${user?.email}`
+        const url = `https://safe-oasis-85721.herokuapp.com/myOrders/${user?.email}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMyOrders(data))
@@ -33,7 +33,7 @@ const MyOrders = () => {
         const proceed = window.confirm('Are you sure, you want to cancel the order?')
         if (proceed) {
 
-            const url = `http://localhost:5000/deleteOrder/${id}`;
+            const url = `https://safe-oasis-85721.herokuapp.com/deleteOrder/${id}`;
             // const url = `https://quiet-hamlet-58430.herokuapp.com/deleteOrder/${id}`;
             fetch(url, {
                 method: 'DELETE'
