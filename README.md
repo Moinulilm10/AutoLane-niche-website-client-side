@@ -1,3 +1,18 @@
+- This motor bike website build with react and firebase authentication.
+- This contain 5 main route.
+- Two Route are Private Route. They are admin and destination components.
+- User only can protected if he or she has account in this website.
+- Context Api also used in this project.
+- Also have two types firebase authentication , google sign verification.
+
+- admin email and password is - admin@admin.com and 123456
+
+- github private repo client side link : https://github.com/programming-hero-web-course-4/niche-website-client-side-Moinulilm10
+
+- github private repo server side link : https://github.com/programming-hero-web-course-4/niche-website-server-side-Moinulilm10
+
+- live site link : https://niche-project-5e64c.web.app/login
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,4 +83,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # niche-website-client-side-Moinulilm10
