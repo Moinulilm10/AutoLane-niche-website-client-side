@@ -3,10 +3,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions, CircularProgress, Container } from '@mui/material';
-
 import { Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
 
 const ManageProducts = () => {
 
@@ -32,7 +30,7 @@ const ManageProducts = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.deletedCount) {
                     alert('deleted')
                     const remaining = allProducts.filter(service => service._id !== id)

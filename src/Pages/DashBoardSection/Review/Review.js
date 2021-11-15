@@ -14,7 +14,7 @@ const Review = () => {
     const { user } = useAuth()
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
         data.email = user?.email;
         axios.post('http://localhost:5000/reviews', data)
             .then(res => {
@@ -35,7 +35,7 @@ const Review = () => {
                 Give a review
             </Typography>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <input {...register("img")} placeholder="want to upload a pic ?" />
+                {/* <input {...register("img")} placeholder="want to upload a pic ?" /> */}
                 <input defaultValue={user.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                 {/* <input type="number" {...register("ratting", { min: 0, max: 5 })} placeholder="ratting" /> */}
 

@@ -54,11 +54,14 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
+
+    // google sign in
     const signInWithGoogle = (location, history) => {
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
+                console.log(user)
                 saveUser(user.email, user.displayName, 'PUT');
                 setAuthError('');
                 const destination = location?.state?.from || '/';
@@ -67,6 +70,14 @@ const useFirebase = () => {
                 setAuthError(error.message);
             }).finally(() => setIsLoading(false));
     }
+
+    // const signInWithGoogle = () => {
+    //     setIsLoading(true)
+    //     return signInWithPopup(auth, googleProvider)
+
+    //         .finally(() => setIsLoading(false))
+    // }
+
 
     // observer user state
     useEffect(() => {

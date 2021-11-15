@@ -1,5 +1,4 @@
 import { Container, Grid, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
-import { textAlign } from '@mui/material';
 import React, { useState } from 'react';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
@@ -9,9 +8,9 @@ import Navigation from '../../Shared/Navigation/Navigation';
 
 
 const Login = () => {
-
     const [loginData, setLoginData] = useState({})
     const { user, loginUser, authError, isLoading, signInWithGoogle } = useAuth();
+
     const location = useLocation();
     const history = useHistory();
 
@@ -23,13 +22,28 @@ const Login = () => {
         setLoginData(newLoginData)
 
     }
+
     const handleLoginSubmit = e => {
         loginUser(loginData.email, loginData.password, location, history);
         e.preventDefault();
     }
+
+
     const handleGoogleSignIn = () => {
         signInWithGoogle(location, history)
     }
+
+    // const redirect_url = location.state?.from || '/'
+    // console.log('came form', location?.state?.from)
+
+    // const handleGoogleSignIn = () => {
+    //     signInWithGoogle()
+    //         .then(result => {
+    //             history.push(redirect_url)
+    //         })
+    // }
+
+
     return (
         <div>
             <Navigation></Navigation>
@@ -40,6 +54,7 @@ const Login = () => {
                             Login
                         </Typography>
                         <form onSubmit={handleLoginSubmit}>
+
                             <TextField
                                 sx={{ width: '75%', m: 1, color: 'blue' }}
                                 id="standard-basic"
@@ -47,16 +62,17 @@ const Login = () => {
                                 name="email"
                                 onChange={handleOnChange}
                                 variant="standard" />
+
                             <TextField
                                 sx={{ width: '75%', m: 1, color: 'blue' }}
                                 id="standard-basic"
-                                label="Your PassWord"
+                                label="Your Password"
                                 name="password"
-
                                 type="password"
-
                                 onChange={handleOnChange}
-                                variant="standard" />
+                                variant="standard"
+                            />
+
                             <Button sx={{ width: '75%', mt: 4 }} type="submit" variant="contained">Login</Button>
                             <NavLink style={{ textDecoration: 'none', marginTop: '30px', }} to="/register"><Button variant="text" style={{ marginTop: '30px', textAlign: 'center' }}>New User? Please Register</Button></NavLink>
                             {isLoading && <CircularProgress />}
@@ -69,7 +85,6 @@ const Login = () => {
                     <Grid item xs={12} md={6}>
                         <img style={{ width: '100%' }} src={login} alt="" />
                     </Grid>
-
                 </Grid>
             </Container>
             <Footer></Footer>

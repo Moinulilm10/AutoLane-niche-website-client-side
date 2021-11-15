@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin: 100px;
+  margin: 200px;
 }
 
 .container .card {
@@ -88,11 +88,13 @@
 @media only screen and (max-width: 688px) {
   .container {
     flex-direction: column;
+    margin: 100px;
   }
 }
 
 @media only screen and (min-width: 689px) and (max-width: 1200px) {
   .container {
     flex-direction: column;
+    margin: 160px;
   }
 }

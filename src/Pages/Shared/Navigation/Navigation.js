@@ -86,13 +86,18 @@ export default function Navigation() {
                 <Divider />
                 <ListItem button>
                     <ListItemText>
-                        <Link className={mobileNavItem} to="/explores">Products</Link>
+                        <Link className={mobileNavItem} to="/explores">Explore</Link>
                     </ListItemText>
                 </ListItem>
                 <Divider />
                 <ListItem button>
                     <ListItemText>
-                        <Link className={mobileNavItem} to="/about">About</Link>
+                        <Link className={mobileNavItem} to="/about">AboutUs</Link>
+                    </ListItemText>
+                </ListItem>
+                <ListItem button>
+                    <ListItemText>
+                        <Link className={mobileNavItem} to="/contact">ContactUs</Link>
                     </ListItemText>
                 </ListItem>
                 <Divider />
@@ -165,12 +170,16 @@ export default function Navigation() {
 
                         <div style={{ display: 'flex' }} className={navItemContainer}>
                             <Link className={navItem} to="/explores">
-                                <Button color="inherit">Products</Button>
+                                <Button color="inherit">Explore</Button>
                             </Link>
 
 
                             <Link className={navItem} to="/about">
                                 <Button color="inherit">AboutUs</Button>
+                            </Link>
+
+                            <Link className={navItem} to="/contact">
+                                <Button color="inherit">ContactUs</Button>
                             </Link>
 
                             {

@@ -27,7 +27,7 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    console.log(data);
+                    // console.log(data);
                     setSuccess(true);
                 }
             })
@@ -36,7 +36,8 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h2>This is make admin</h2>
+            <h2>Make admin easily</h2>
+
             <form onSubmit={handleAdminSubmit}>
                 <TextField
                     sx={{ width: '50%' }}
@@ -47,7 +48,7 @@ const MakeAdmin = () => {
                 <Button type="submit" variant="contained">Make Admin</Button>
             </form>
             <br />
-            {success && <Alert severity="success">Made Admin successfully!</Alert>}
+            {success && <Alert style={{ width: '100%' }} severity="success">Made Admin successfully!</Alert>}
         </div>
     );
 };

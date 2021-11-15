@@ -27,9 +27,10 @@ const Explores = () => {
         <div>
             <Navigation></Navigation>
             <Box sx={{ flexGrow: 1 }}>
-                <Typography sx={{ fontWeight: 500, mt: 5, color: 'primary.main' }} variant="h3" component="div">
+                <Typography sx={{ fontFamily: 'Brush Script MT, Brush Script Std, cursive', fontWeight: 500, mt: 5, color: '#8B8000' }} variant="h3" component="div">
                     Our Products
                 </Typography>
+
                 {isLoading ?
                     (
                         <CircularProgress />

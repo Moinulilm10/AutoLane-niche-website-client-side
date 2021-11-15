@@ -25,7 +25,7 @@ const MyOrders = () => {
             .then(data => setMyOrders(data))
     }, [user?.email])
 
-    console.log(myOrders)
+    // console.log(myOrders)
 
 
     const handleCancelOrder = (id) => {
@@ -40,7 +40,7 @@ const MyOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (data.deletedCount > 0) {
                         alert('successfully canceled...')
                         const reamainingServices = myOrders.filter(service => service._id !== id)

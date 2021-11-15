@@ -14,7 +14,7 @@ const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
         data.email = admin?.email;
         axios.post('http://localhost:5000/services', data)
             .then(res => {

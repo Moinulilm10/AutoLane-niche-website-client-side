@@ -10,7 +10,7 @@ const ExtraSection = () => {
             <Typography style={{ fontFamily: 'Brush Script MT, Brush Script Std, cursive', fontSize: '30px', color: 'darkred' }} variant="h6" gutterBottom component="div">
                 Why chose us
             </Typography>
-            <Typography style={{ fontWeight: 'bolder' }} variant="h4" component="div">
+            <Typography style={{ fontWeight: 'bolder', color: '#8B8000' }} variant="h4" component="div">
                 our advantages
             </Typography>
             <div class="container" style={{ marginTop: '-10px' }}>

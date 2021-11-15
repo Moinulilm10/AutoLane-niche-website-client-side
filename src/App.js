@@ -11,6 +11,7 @@ import PlaceOrder from './Pages/Home/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './Pages/DashBoardSection/Dashboard/Dashboard';
 import Explores from './Pages/Home/Explores/Explores';
+import ContactUs from './Pages/Home/ContactUs/ContactUs';
 
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             </PrivateRoute>
             <Route exact path="/about">
               <AboutUs></AboutUs>
+            </Route>
+            <Route exact path="/contact">
+              <ContactUs></ContactUs>
             </Route>
             <Route path="/login">
               <Login></Login>

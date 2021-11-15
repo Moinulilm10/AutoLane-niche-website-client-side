@@ -25,7 +25,7 @@ const ReviewSection = () => {
     return (
         <div style={{ marginTop: '70px' }}>
             <Container>
-                <Typography variant="h4" sx={{ color: 'info.main', mb: 3 }}>Check out out recent review</Typography>
+                <Typography variant="h4" sx={{ fontFamily: 'Brush Script MT, Brush Script Std, cursive', color: 'info.main', mb: 3 }}>Check out out recent review</Typography>
                 {isLoading ?
                     (
                         <CircularProgress />

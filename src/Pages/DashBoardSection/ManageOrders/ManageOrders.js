@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../../Hooks/useAuth';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -8,7 +7,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
 const ManageOrders = () => {
@@ -40,7 +38,7 @@ const ManageOrders = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (data.deletedCount > 0) {
                         alert('successfully canceled...')
                         const reamainingServices = userOrders.filter(service => service._id !== id)
@@ -53,7 +51,7 @@ const ManageOrders = () => {
 
 
     const handleApproveOrder = (id) => {
-        console.log(id);
+        // console.log(id);
         const updatedorder = userOrders.find(order => order._id === id);
         updatedorder.status = 'approved';
 
