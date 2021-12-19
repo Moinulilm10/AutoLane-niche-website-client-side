@@ -5,13 +5,7 @@
 - Context Api also used in this project.
 - Also have two types firebase authentication , google sign verification.
 
-- admin email and password is - admin@admin.com and 123456
-
-- github private repo client side link : https://github.com/programming-hero-web-course-4/niche-website-client-side-Moinulilm10
-
-- github private repo server side link : https://github.com/programming-hero-web-course-4/niche-website-server-side-Moinulilm10
-
-- live site link : https://niche-project-5e64c.web.app/login
+- live site link : https://niche-project-5e64c.web.app
 
 # Getting Started with Create React App
 

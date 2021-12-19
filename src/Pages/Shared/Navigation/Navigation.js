@@ -123,6 +123,11 @@ export default function Navigation() {
                         </ListItem>
 
                 }
+
+
+                <Typography style={{ margin: '6px', }} variant="button" >
+                    <a style={{ color: 'yellow' }} href="#login"> {user?.displayName}</a>
+                </Typography>
                 <Divider />
 
 
